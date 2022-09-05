@@ -1,0 +1,17 @@
+build:brex --remote_executor=grpcs://brucite.cluster.engflow.com
+build:brex --bes_backend=grpcs://brucite.cluster.engflow.com
+build:brex --bes_lifecycle_events
+build:brex --bes_results_url=https://brucite.cluster.engflow.com/invocation/
+build:brex --tls_client_certificate=/Users/mikez/Downloads/engflow-mTLS/engflow.crt
+build:brex --tls_client_key=/Users/mikez/Downloads/engflow-mTLS/engflow.key
+build:brex --remote_default_exec_properties=Pool=linux_x64
+build:brex --host_cpu=k8
+build:brex --cpu=k8
+build:brex --define=EXECUTOR=remote
+build:brex --extra_execution_platforms=//:engflow_platform
+build:brex --host_platform=//:engflow_platform
+build:brex --platforms=//:engflow_platform
+build:brex --extra_toolchains=//remote_config/config:cc-toolchain
+build:brex --crosstool_top=//remote_config/cc:toolchain
+build:brex --java_runtime_version=remotejdk_11
+build:brex --java_language_version=11
