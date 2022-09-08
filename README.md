@@ -11,3 +11,7 @@ Example invocation in this repo:
 bazel build //genrules/... --config=brex
 ```
 
+```
+./bazel5.2.0_persistent run //java/com/engflow/example:example_bin --config=brex --config=mac --noremote_accept_cached
+```
+
