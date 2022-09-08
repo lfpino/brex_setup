@@ -16,7 +16,7 @@
 # on the user's input.
 # This can be used for stress testing your build infrastructure.
 # Change the upper bound of the range and enjoy!
-UPPER_BOUND = 1000
+UPPER_BOUND = 999
 
 [genrule(
     name = "foo_TXT_4KB_" + str(x),

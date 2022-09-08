@@ -33,7 +33,7 @@ toolchain(
 )
 
 platform(
-    name = "engflow_platform",
+    name = "linux_platform",
     constraint_values = [
         "@platforms//os:linux",
         "@platforms//cpu:x86_64",
@@ -45,4 +45,16 @@ platform(
         "Pool": "linux_x64_kotlin",
     },
     parents = ["@local_config_platform//:host"],
+)
+
+
+platform(
+    name = "macos_platform",
+    constraint_values = [
+        "@platforms//cpu:x86_64",
+        "@platforms//os:macos",
+    ],
+    exec_properties = {
+        "Pool": "macos_kotlin",
+    },
 )
