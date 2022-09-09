@@ -5,6 +5,8 @@ build:brex --bes_results_url=https://brucite.cluster.engflow.com/invocation/
 build:brex --tls_client_certificate=/Users/mikez/Downloads/engflow-mTLS/engflow.crt
 build:brex --tls_client_key=/Users/mikez/Downloads/engflow-mTLS/engflow.key
 build:brex --define=EXECUTOR=remote
+build:brex --announce_rc
+build:brex --verbose_failures
 
 
 build:linux --extra_execution_platforms=//remote_config/config:linux_platform
